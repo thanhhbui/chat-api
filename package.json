@@ -1,0 +1,13 @@
+{
+  "name": "chat-api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "thanhbui chat-app",
+  "main": "src/server.js",
+  "author": "thanhbui",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
