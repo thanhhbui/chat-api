@@ -1,6 +1,6 @@
 import express from 'express'
 import { StatusCodes } from 'http-status-codes'
-import { chatRoutes } from './chatRoutes'
+import { chatRoute } from './chatRoute'
 
 const Router = express.Router()
 
@@ -10,6 +10,6 @@ Router.get('/status', (req, res) => {
 })
 
 // chat API
-Router.use('/chats', chatRoutes)
+Router.use('/chats', chatRoute)
 
 export const APIs_V1 = Router
