@@ -1,17 +1,17 @@
 import { StatusCodes } from 'http-status-codes'
-import { chatService } from '~/services/chatService'
+import { messageService } from '~/services/messageService'
 
 const createNew = async (req, res, next) => {
   try {
     // điều hướng dữ liệu qua service để xử lý
-    const createdChat = await chatService.createNew(req.body)
+    const createdMes = await messageService.createNew(req.body)
     // có kết quả thì trả về client
-    res.status(StatusCodes.CREATED).json(createdChat)
+    res.status(StatusCodes.CREATED).json(createdMes)
   } catch (error) {
     next(error)
   }
 }
 
-export const chatController = {
+export const messageController = {
   createNew
 }
