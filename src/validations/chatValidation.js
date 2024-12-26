@@ -9,7 +9,7 @@ const createNew = async (req, res, next) => {
   })
 
   try {
-    console.log(req.body)
+    // console.log(req.body)
 
     await correctCondition.validateAsync(req.body, { abortEarly: false })
     next()

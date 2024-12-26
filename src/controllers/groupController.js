@@ -1,17 +1,19 @@
+
 import { StatusCodes } from 'http-status-codes'
-import { chatService } from '~/services/chatService'
+import { groupService } from '~/services/groupService'
+
 
 const createNew = async (req, res, next) => {
   try {
     // điều hướng dữ liệu qua service để xử lý
-    const createdChat = await chatService.createNew(req.body)
+    const createdGroup = await groupService.createNew(req.body)
     // có kết quả thì trả về client
-    res.status(StatusCodes.CREATED).json(createdChat)
+    res.status(StatusCodes.CREATED).json(createdGroup)
   } catch (error) {
     next(error)
   }
 }
 
-export const chatController = {
+export const groupController = {
   createNew
 }
